@@ -1,4 +1,9 @@
 %define modname geoip
+
+# En EL10 rpmbuild genera subpaquetes -debuginfo/-debugsource; el debugsource
+# queda vacio y aborta el build. No se empaquetan simbolos de depuracion.
+%global debug_package %{nil}
+
 Name: issabel-geoip
 Version: 1.6.12
 Release: 4
